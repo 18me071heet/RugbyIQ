@@ -15,7 +15,7 @@ import pageObject.LogIn;
 
 public class CreateDrillTest extends BaseClassRgy {
 
-	  @Test(priority = 1, description = "Verify successful session creation")
+	  @Test(priority = 1, description = "Verify successful session drill creation")
 	    public void verifyCreateDrill() {
 	        System.out.println("=== Test: Verify Successful Session Creation ===");
 	        

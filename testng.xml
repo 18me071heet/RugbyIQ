@@ -12,13 +12,30 @@
     
     <test name="Rugby Tests">
         <classes>
+        
+           <!--    <class name="test.SignUpTest"></class>-->
            <!--   <class name="test.LogIN"/>-->
            <!--   <class name="test.LogOUT"/>-->
+           
           <!--    <class name="test.CreateTeamTest"/>-->
             <!--  <class name="test.CreatePlanTest"/>-->
             <!--  <class name="test.CreateSessionTest"/>-->
             <!--  <class name="test.CreateDrillTest"></class>-->
-            <class name="test.NavigationTest"></class>
+            
+          <!--  <class name="test.NavigationTest"></class>-->
+       
+         <!--     <class name="test.EditTeamTest"></class>-->
+            <!--    <class name="test.EditPlanTest"></class>-->
+           <!--     <class name="test.EditSessionTest"></class>-->
+           <!--   <class name="test.EditSessionDrillTest"></class>-->
+           
+           <class name="test.CreatePlayBookTest"></class>
+        <!--   <class name="test.CreatePlaysTest"></class>-->
+        <!--   <class name="test.EditPlayBookTest"></class>-->
+     <!--    <class name="test.EditPlaysTest"></class>-->
+        
+        <!--   <class name="test.DeletePlayBookTest"></class>-->
+            
         </classes>
     </test>
     

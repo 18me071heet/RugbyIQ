@@ -14,11 +14,9 @@ public class NavigationTest extends BaseClassRgy{
 	    public void verifyNavigations() {
 	        System.out.println("=== Test: Verify Successful Session Creation ===");
 	        
-	        // 1. Login
 	        LogIn loginPage = new LogIn(driver);
 	        loginPage.performLogin(getProperty("email"), getProperty("password"));
-	        
-	        // 2. Navigate to My Teams
+	            
 	        CreateTeam teamPage = new CreateTeam(driver);
 	        teamPage.navigateToMyTeams();
 	        

@@ -8,13 +8,13 @@
   </listeners>
   <test thread-count="5" name="Rugby Tests(failed)">
     <classes>
-      <class name="test.CreateDrillTest">
+      <class name="test.EditPlaysTest">
         <methods>
           <include name="setUp"/>
-          <include name="verifyCreateDrill"/>
+          <include name="editPlays"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- test.CreateDrillTest -->
+      </class> <!-- test.EditPlaysTest -->
     </classes>
   </test> <!-- Rugby Tests(failed) -->
 </suite> <!-- Failed suite [RugbyIQ Test Suite] -->

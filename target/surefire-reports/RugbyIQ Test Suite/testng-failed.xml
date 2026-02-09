@@ -6,15 +6,15 @@
   <listeners>
     <listener class-name="utility.ExtentReportRgy"/>
   </listeners>
-  <test thread-count="5" name="Login Tests(failed)" verbose="0">
+  <test thread-count="5" name="Rugby Tests(failed)" verbose="0">
     <classes>
-      <class name="test.CreateSessionTest">
+      <class name="test.EditTeamTest">
         <methods>
           <include name="setUp"/>
+          <include name="verifyEditTeam"/>
           <include name="tearDown"/>
-          <include name="verifyCreateSession"/>
         </methods>
-      </class> <!-- test.CreateSessionTest -->
+      </class> <!-- test.EditTeamTest -->
     </classes>
-  </test> <!-- Login Tests(failed) -->
+  </test> <!-- Rugby Tests(failed) -->
 </suite> <!-- Failed suite [RugbyIQ Test Suite] -->
