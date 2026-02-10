@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="RugbyIQ Test Suite" verbose="1">
+    <suite name="RugbyIQ Test Suite" verbose="1">
     
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
@@ -11,6 +11,7 @@
     </listeners>
     
     <test name="Rugby Tests">
+    
         <classes>
         
            <!--    <class name="test.SignUpTest"></class>-->
@@ -29,12 +30,25 @@
            <!--     <class name="test.EditSessionTest"></class>-->
            <!--   <class name="test.EditSessionDrillTest"></class>-->
            
-           <class name="test.CreatePlayBookTest"></class>
-        <!--   <class name="test.CreatePlaysTest"></class>-->
-        <!--   <class name="test.EditPlayBookTest"></class>-->
-     <!--    <class name="test.EditPlaysTest"></class>-->
+        <!--     <class name="test.CreatePlayBookTest"></class>-->
+         <!--  <class name="test.CreatePlaysTest"></class>-->
+          <!--   <class name="test.EditPlayBookTest"></class>-->
+         <!--    <class name="test.EditPlaysTest"></class>-->
         
-        <!--   <class name="test.DeletePlayBookTest"></class>-->
+         <!--   <class name="test.DeletePlayBookTest"></class>-->
+            <!--  <class name="test.DeleteTeamTest"></class>-->
+        <!-- <class name="test.DeletePlanTest"></class>-->
+       <!--   <class name="test.DeleteDrillTest"></class>-->
+     
+         
+          <!-- <class name="test.CreateMyDrillTest"></class>-->
+         <!-- <class name="test.EditMyDrillTest"></class>-->
+       <!--  <class name="test.DeleteMyDrillTest"></class>-->
+       
+           <!-- <class name="test.SearchRecordsTest"></class>-->
+           
+           <class name="test.MyProfileTest"></class>
+         
             
         </classes>
     </test>

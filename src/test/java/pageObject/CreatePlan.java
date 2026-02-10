@@ -23,6 +23,9 @@ public class CreatePlan {
 
     @FindBy(id = "edit_plan_logo")
     WebElement planLogoUpload;
+    
+    @FindBy(xpath = "//span[text()='My Plans']")
+    WebElement myPlansMenu;
 
     @FindBy(xpath = "//form[contains(@class,'create-plan-form')]//button[@type='submit']")
     WebElement submitBtn;
@@ -76,5 +79,10 @@ public class CreatePlan {
         }
         
         return false;
+    }
+    
+    public void goToMyPlans() {
+    	
+    	wait.until(ExpectedConditions.visibilityOf(myPlansMenu)).click();
     }
 }

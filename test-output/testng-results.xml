@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-09T17:56:01 IST" name="RugbyIQ Test Suite" finished-at="2026-02-09T17:56:19 IST" duration-ms="18255">
+  <suite started-at="2026-02-10T15:52:38 IST" name="RugbyIQ Test Suite" finished-at="2026-02-10T15:52:59 IST" duration-ms="20669">
     <groups>
     </groups>
-    <test started-at="2026-02-09T17:56:01 IST" name="Rugby Tests" finished-at="2026-02-09T17:56:19 IST" duration-ms="18255">
-      <class name="test.DeletePlayBookTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.DeletePlayBookTest@3fc2959f]" started-at="2026-02-09T17:56:01 IST" name="setUp" finished-at="2026-02-09T17:56:06 IST" duration-ms="4704" status="PASS">
+    <test started-at="2026-02-10T15:52:38 IST" name="Rugby Tests" finished-at="2026-02-10T15:52:59 IST" duration-ms="20669">
+      <class name="test.MyProfileTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.MyProfileTest@3fc2959f]" started-at="2026-02-10T15:52:38 IST" name="setUp" finished-at="2026-02-10T15:52:43 IST" duration-ms="4313" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="removePlayBook()[pri:1, instance:test.DeletePlayBookTest@3fc2959f]" started-at="2026-02-09T17:56:06 IST" name="removePlayBook" description="Remove Playbook" finished-at="2026-02-09T17:56:19 IST" duration-ms="12770" status="PASS">
+        <test-method signature="editProfile()[pri:1, instance:test.MyProfileTest@3fc2959f]" started-at="2026-02-10T15:52:43 IST" name="editProfile" description="Edit Profile Details" finished-at="2026-02-10T15:52:58 IST" duration-ms="15607" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- removePlayBook -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.DeletePlayBookTest@3fc2959f]" started-at="2026-02-09T17:56:19 IST" name="tearDown" finished-at="2026-02-09T17:56:19 IST" duration-ms="341" status="PASS">
+        </test-method> <!-- editProfile -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.MyProfileTest@3fc2959f]" started-at="2026-02-10T15:52:58 IST" name="tearDown" finished-at="2026-02-10T15:52:59 IST" duration-ms="348" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- test.DeletePlayBookTest -->
+      </class> <!-- test.MyProfileTest -->
     </test> <!-- Rugby Tests -->
   </suite> <!-- RugbyIQ Test Suite -->
 </testng-results>

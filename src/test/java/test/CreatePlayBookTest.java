@@ -11,7 +11,6 @@ public class CreatePlayBookTest extends BaseClassRgy {
 	@Test(priority=1,description="Creation of Play Book")
 	public void createPlayBook() {
 		
-		 // 1. Login
         LogIn loginPage = new LogIn(driver);
         loginPage.performLogin(getProperty("email"), getProperty("password"));
         

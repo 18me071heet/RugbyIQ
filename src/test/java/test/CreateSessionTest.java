@@ -44,6 +44,6 @@ public class CreateSessionTest extends BaseClassRgy {
              boolean isVisible = sessionPage.isSessionVisible("Pre Session");
              Assert.assertTrue(isVisible, "Session 'Pre Session' should be visible in the listing after creation.");
         
-        System.out.println("Session creation successful and verified!");
+              System.out.println("Session creation successful and verified!");
     }
 }

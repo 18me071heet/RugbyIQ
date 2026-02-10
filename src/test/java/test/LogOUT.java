@@ -5,7 +5,8 @@ import org.testng.annotations.Test;
 import baseClass.BaseClassRgy;
 import pageObject.LogOut;
 
-public class LogOUT extends BaseClassRgy {
+   public class LogOUT extends BaseClassRgy {
+	
     LogOut logoutPage;
 
     @Test(priority = 1, description = "Verify successful logout")

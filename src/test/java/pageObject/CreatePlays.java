@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -33,6 +34,10 @@ public class CreatePlays {
 	   
 	   @FindBy(xpath = "//h2[contains(@class, 'text-gray-900')]")
 	    List<WebElement> myPlaysListing;
+	   
+	   @FindBy(xpath = "//a[normalize-space()='Yes Remove']")
+	   WebElement clickRemove;
+
 	   
 	   public void selectPlayBook(String playBookName) {
 		    String xpath = "//h3[normalize-space()='" + playBookName + "']/ancestor::div[contains(@class,'bg-primary-100')]/a";
@@ -69,6 +74,29 @@ public class CreatePlays {
 	        
 	        return false;
 	    }
+	   
+   
+	   public void clickOnDeletePlay() {
+
+		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
+		    WebElement deleteBtn = wait.until(ExpectedConditions.presenceOfElementLocated(
+		            By.xpath("//a[contains(@class,'delete_play') and normalize-space()='Delete']")
+		    ));
+
+		    JavascriptExecutor js = (JavascriptExecutor) driver;
+		    js.executeScript("arguments[0].scrollIntoView({block:'center'});", deleteBtn);
+		    js.executeScript("arguments[0].click();", deleteBtn);
+
+		    System.out.println("Clicked on Delete play");
+		}
+	   
+	   public void removePlays() {
+		   
+		   wait.until(ExpectedConditions.visibilityOf(clickRemove)).click();
+	   }
+
+
 	   
 	   
 	   

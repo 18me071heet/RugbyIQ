@@ -24,7 +24,7 @@ public class EditTeamTest extends BaseClassRgy {
         // 3. Edit Team "Pro30"
         EditTeam editTeamPage = new EditTeam(driver);
         
-        // click three dot on "Pro30" team
+        // click three dot on "Pro10" team
         editTeamPage.clickThreeDots("Pro10");
         
         // click on edit

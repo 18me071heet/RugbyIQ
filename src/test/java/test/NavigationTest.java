@@ -12,6 +12,7 @@ public class NavigationTest extends BaseClassRgy{
 
 	 @Test(priority = 1, description = "Verify successful session creation")
 	    public void verifyNavigations() {
+		 
 	        System.out.println("=== Test: Verify Successful Session Creation ===");
 	        
 	        LogIn loginPage = new LogIn(driver);
