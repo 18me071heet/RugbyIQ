@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class EditPlays {
 
-	 WebDriver driver;
+	    WebDriver driver;
 	    WebDriverWait wait;
 
 	    public EditPlays(WebDriver driver) {

@@ -1,6 +1,7 @@
 package pageObject;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -24,6 +25,9 @@ public class DeleteDrill {
     
     @FindBy(xpath=" //a[normalize-space()='Yes Remove']")
     WebElement removeDrill;
+   
+    @FindBy(xpath = "//h2[contains(@class, 'text-gray-900')]")
+    List<WebElement> DrillNamesInListing;
     
     public void clickOnThreeDotByName(String drillName) {
 
@@ -47,15 +51,30 @@ public class DeleteDrill {
     }
     
     public void clickDeleteDrillOption(String drillName) {
+    	
         WebElement deleteBtn = driver.findElement(
-            By.xpath("//h3[contains(text(),'" + drillName + "')]/ancestor::div[contains(@class,'sortable-item')]//a[contains(@class,'delete_drill')]")
-        );
+            By.xpath("//h3[contains(text(),'" + drillName + "')]/ancestor::div[contains(@class,'sortable-item')]//a[contains(@class,'delete_drill')]"));
+        
         deleteBtn.click();
     }
     
     public void removeDrill() {
     	
     	wait.until(ExpectedConditions.visibilityOf(removeDrill)).click();
+    }
+    
+    public boolean isDrillNotVisibleInListing(String drillName) {
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        
+        wait.until(ExpectedConditions.visibilityOfAllElements(DrillNamesInListing));
+
+        for (WebElement element : DrillNamesInListing) {
+            if (element.getText().trim().equalsIgnoreCase(drillName)) {
+                return false;   
+            }
+        }
+        return true;
     }
 
 }

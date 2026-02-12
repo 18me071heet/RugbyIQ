@@ -12,8 +12,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class EditSessionDrill {
-
-	 WebDriver driver;
+  
+	    WebDriver driver;
 	    WebDriverWait wait;
 
 	    public EditSessionDrill(WebDriver driver) {
@@ -31,8 +31,7 @@ public class EditSessionDrill {
 	    
 	    @FindBy(xpath="//button[normalize-space()='Update']")
 	    WebElement updateDrill;
-	    
-	    
+	        
 	    public void clickOnSessionDrill(String drillName) {
 
 	        String xpath = "//h3[normalize-space()='" + drillName + "']/ancestor::a";
@@ -51,15 +50,14 @@ public class EditSessionDrill {
 	        System.out.println("Clicked on drill: " + drillName);
 	    }
 
-	    
 	    public void clickEditDrill() {
 	    	
 	    	wait.until(ExpectedConditions.visibilityOf(editDrill)).click();
 	    
 	    }
-	    
-	    
+		    
 	    public void editDrillName(String drillName) {
+	    	
 	        editDrillNameInput.clear();
 	        editDrillNameInput.sendKeys(drillName);
 	    }
@@ -68,4 +66,19 @@ public class EditSessionDrill {
 	    	
 	    	updateDrill.click();
 	    }
+	    
+	    public void playAndStopVideo() {
+
+	        By playBtn = By.xpath("//a[contains(@class,'play-button-session-drill')]");
+
+	        WebElement play = wait.until(ExpectedConditions.elementToBeClickable(playBtn));
+	        play.click();
+	        
+	        try { Thread.sleep(4000); } catch (Exception e) {}
+
+	        JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript("document.querySelector('video').pause();");        
+	    }
+	 
+
 }

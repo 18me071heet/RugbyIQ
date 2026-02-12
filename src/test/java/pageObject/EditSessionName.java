@@ -63,7 +63,6 @@ public class EditSessionName {
 	        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", txtSessionName);
 	    }
 
-	    // React-safe clear
 	    ((JavascriptExecutor) driver)
 	            .executeScript("arguments[0].value='';", txtSessionName);
 

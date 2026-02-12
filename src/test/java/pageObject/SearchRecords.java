@@ -36,8 +36,5 @@ public class SearchRecords {
 		   
 		   wait.until(ExpectedConditions.visibilityOf(btnSearch)).click();
 	   }
-	   
-	   
-	   
-	   
+	   	   
 }

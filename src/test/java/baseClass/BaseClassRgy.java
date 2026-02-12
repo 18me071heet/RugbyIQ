@@ -14,11 +14,13 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.cdimascio.dotenv.Dotenv;
 
 public class BaseClassRgy {
     
     public static WebDriver driver;
     protected static Properties prop;
+    private static Dotenv dotenv;
     
     public static void loadConfig() {
     	
@@ -46,8 +48,10 @@ public class BaseClassRgy {
     public void setUp() {
     	
         loadConfig();
+        dotenv = Dotenv.load();
         
         String browser = prop.getProperty("browser", "chrome").toLowerCase();
+        
         
         switch (browser) {
             case "chrome":
@@ -87,10 +91,10 @@ public class BaseClassRgy {
         int pageLoadTimeout = Integer.parseInt(prop.getProperty("pageLoadTimeout", "30"));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(pageLoadTimeout));
         
-        String url = prop.getProperty("url");
-        driver.get(url);
+    //    String url = prop.getProperty("url");
+        driver.get(dotenv.get("loginUrl").trim());
         
-        System.out.println("Browser launched and navigated to: " + url);
+       // System.out.println("Browser launched and navigated to: " + url);
     }
     
  

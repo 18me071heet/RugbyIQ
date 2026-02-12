@@ -1,0 +1,32 @@
+# Logs
+logs/
+*.log
+
+# Test Reports
+test-output/
+reports/
+allure-results/
+allure-report/
+
+# Environment files
+.env
+
+# Build folders
+target/
+bin/
+out/
+
+# IDE settings
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Config files (optional)
+config.properties

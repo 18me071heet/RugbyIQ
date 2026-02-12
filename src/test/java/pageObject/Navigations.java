@@ -54,22 +54,18 @@ public class Navigations {
     	
    	 wait.until(ExpectedConditions.elementToBeClickable(optionHome)).click();
    }
-    
-    
+     
     public void clickTeams() {
     	
       	 wait.until(ExpectedConditions.elementToBeClickable(optionTeam)).click();
       }
-    
-    
-    
+      
     public void clickPlans() {
     	
       	 wait.until(ExpectedConditions.elementToBeClickable(optionPlan)).click();
       }
     
-    
-    
+   
     public void clickMyDrill() {
     	
       	 wait.until(ExpectedConditions.elementToBeClickable(optionMyDrill)).click();
@@ -103,7 +99,7 @@ public class Navigations {
      	wait.until(ExpectedConditions.elementToBeClickable(optionPlayBook)).click();
      }
     
-public void clickTrash() {
+   public void clickTrash() {
     	
      	wait.until(ExpectedConditions.elementToBeClickable(optionTrash)).click();
      }

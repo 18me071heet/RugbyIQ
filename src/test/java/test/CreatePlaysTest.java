@@ -10,8 +10,8 @@ import pageObject.LogIn;
 
 public class CreatePlaysTest extends BaseClassRgy{
 
-	//@Test(priority=1,description="Create My Plays")
-	/*public void createMyPlays() {
+	@Test(priority=1,description="Create My Plays")
+	public void createMyPlays() {
 		
 		
         LogIn loginPage = new LogIn(driver);
@@ -32,10 +32,10 @@ public class CreatePlaysTest extends BaseClassRgy{
 		plays.isMyPlaysVisible(getProperty("myPlays"));
 		
 	}
-	*/
 	
-	@Test(priority=2,description="Delete Play")
-	public void deletePlay() throws InterruptedException {
+	
+	//@Test(priority=2,description="Delete Play")
+	/*public void deletePlay() throws InterruptedException {
 		
 		 LogIn loginPage = new LogIn(driver);
 	        loginPage.performLogin(getProperty("email"), getProperty("password"));
@@ -58,5 +58,5 @@ public class CreatePlaysTest extends BaseClassRgy{
 	        plays.removePlays();
 			
 			
-	}
+	}*/
 }

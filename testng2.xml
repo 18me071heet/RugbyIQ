@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
 
-    <suite name="Suite">
-    
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
 
     <listeners>
         <listener class-name="utility.ExtentReportRgy"></listener>
     </listeners>
+       
+  <test thread-count="5" name="Test">
+  
+    <classes>
     
-     <test thread-count="5" name="Test">
-    
-        <classes>
-        
-           <!--    <class name="test.SignUpTest"></class>-->
+     <!--    <class name="test.SignUpTest"></class>-->
            <!--   <class name="test.LogIN"/>-->
            <!--   <class name="test.LogOUT"/>-->
            
@@ -39,21 +38,17 @@
             <!--  <class name="test.DeleteTeamTest"></class>-->
         <!-- <class name="test.DeletePlanTest"></class>-->
        <!--   <class name="test.DeleteDrillTest"></class>-->
-     
-         
+          
           <!-- <class name="test.CreateMyDrillTest"></class>-->
          <!-- <class name="test.EditMyDrillTest"></class>-->
        <!--  <class name="test.DeleteMyDrillTest"></class>-->
        
-           <!-- <class name="test.SearchRecordsTest"></class>-->
-           
-              <!--   <class name="test.MyProfileTest"></class>-->
-           
+          <class name="test.SearchRecordsTest"></class>
+             <!--   <class name="test.MyProfileTest"></class>-->
            <!--  <class name="test.DrillPlayTest"></class>-->
-           <class name="test.InviteCoachTest"></class>
-         
-            
-        </classes>
-    </test>
-    
-</suite>
+            <!--  <class name="test.InviteCoachTest"></class>-->
+            <!-- <class name="test.EditCoachAccessTest"></class>-->
+           
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

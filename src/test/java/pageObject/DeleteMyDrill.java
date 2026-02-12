@@ -1,6 +1,7 @@
 package pageObject;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -13,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DeleteMyDrill {
 	
-	 WebDriver driver;
+	    WebDriver driver;
 	    WebDriverWait wait;
 	    
 	    public DeleteMyDrill(WebDriver driver) {
@@ -24,7 +25,7 @@ public class DeleteMyDrill {
 	    
 	    @FindBy(xpath=" //a[normalize-space()='Yes Remove']")
 	    WebElement btnRemove;
-	    
+	    	    
 	    public void clickDeleteOption() {
 
 	        By deleteBtn = By.xpath("//div[contains(@id,'dropdown') and contains(@class,'block')]//a[contains(@class,'delete_drill')]");

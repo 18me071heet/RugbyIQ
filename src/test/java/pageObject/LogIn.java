@@ -11,26 +11,26 @@ import java.time.Duration;
 
 public class LogIn {
     
-    private WebDriver driver;
-    private WebDriverWait wait;
+    public WebDriver driver;
+    public WebDriverWait wait;
     
     @FindBy(name = "email")
-    private WebElement emailField;
+    public WebElement emailField;
     
     @FindBy(id = "password")
-    private WebElement passwordField;
+    public WebElement passwordField;
   
     @FindBy(xpath = "//button[@type='submit' and contains(text(),'Sign in')]")
-    private WebElement loginButton;
+    public WebElement loginButton;
     
     @FindBy(xpath = "//a[contains(text(),'Forgot Password')]")
-    private WebElement forgotPasswordLink;
+    public WebElement forgotPasswordLink;
     
     @FindBy(xpath = "//a[contains(text(),'Sign Up')]")
-    private WebElement signUpLink;
+    public WebElement signUpLink;
     
     @FindBy(xpath = "//*[contains(@class,'error') or contains(@class,'alert') or contains(@class,'invalid')]")
-    private WebElement errorMessage;
+    public WebElement errorMessage;
     
     public LogIn(WebDriver driver) {
         this.driver = driver;

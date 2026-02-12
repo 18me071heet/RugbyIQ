@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class EditPlayBook {
 
-	 WebDriver driver;
+	  WebDriver driver;
 	    WebDriverWait wait;
 
 	    public EditPlayBook(WebDriver driver) {
@@ -27,7 +27,7 @@ public class EditPlayBook {
 	    public WebElement updateButton;
 	    
 	    @FindBy(id = "playbook_name")
-	    private WebElement playbookNameInput;
+	    public WebElement playbookNameInput;
 	    
 	    @FindBy(xpath = "//h2[contains(@class,'text-gray-900')]")
 	    List<WebElement> playBookListing;

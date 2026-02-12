@@ -9,7 +9,9 @@ import pageObject.CreatePlayBook;
 import pageObject.CreatePlays;
 import pageObject.CreateSession;
 import pageObject.CreateTeam;
+import pageObject.EditCoachAccess;
 import pageObject.LogIn;
+import pageObject.Navigations;
 import pageObject.SearchRecords;
 
 public class SearchRecordsTest extends BaseClassRgy {
@@ -99,10 +101,9 @@ public class SearchRecordsTest extends BaseClassRgy {
 	        Thread.sleep(4000);
 	}
 	
-	@Test(priority=6,description="Search specific plays")
+	@Test(priority=6,description="Search specific my plays")
 	public void searchMyPlays() throws InterruptedException {
 		
-	
 	    	CreatePlays plays = new CreatePlays(driver);
 			
 			plays.selectPlayBook(getProperty("editedPlayBook"));
@@ -112,6 +113,23 @@ public class SearchRecordsTest extends BaseClassRgy {
 	        search.searchRecordName(getProperty("searchMyPlays"));
 	        Thread.sleep(3000);   
 	        search.clickSearch();
+	}
+	
+	@Test(priority=7,description="Search invited coach")
+	public void searchInvitedCoach(){
+		
+		Navigations navigation = new Navigations(driver);
+		
+		navigation.clickInviteCoaches();
+		
+		EditCoachAccess coach = new EditCoachAccess(driver);
+		
+		coach.clickTeamByName(driver, "Pro10");
+		
+		SearchRecords search = new SearchRecords(driver);
+		search.searchRecordName(getProperty("coachName"));
+		search.clickSearch();
+		
 	}
 
 }

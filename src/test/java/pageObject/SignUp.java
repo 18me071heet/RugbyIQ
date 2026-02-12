@@ -92,7 +92,7 @@ public class SignUp {
    
    public void uploadProfileImage() {
   	 
-  	 WebElement uploadImage = driver.findElement(By.xpath(" //input[@id='profile_image']"));
+  	     WebElement uploadImage = driver.findElement(By.xpath(" //input[@id='profile_image']"));
 		 uploadImage.sendKeys("C:\\Users\\INX\\Downloads\\rugby.jpg");
 	 
    }

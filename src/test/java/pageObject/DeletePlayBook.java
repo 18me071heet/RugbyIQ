@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DeletePlayBook {
 
-	   WebDriver driver;
+	    WebDriver driver;
 	    WebDriverWait wait;
 	    
 	    public DeletePlayBook(WebDriver driver) {
@@ -23,7 +23,6 @@ public class DeletePlayBook {
 	    
 	    @FindBy(xpath="//a[normalize-space()='Yes Remove']")
 	    WebElement btnRemove;
-	    
 	    
 	    public void clickThreeDot(String playBookName) {
 	        String xpath = "//h3[normalize-space()='" + playBookName + "']/ancestor::div[contains(@class,'bg-primary-100')]//button[contains(@id,'dropdownDefaultButton')]";

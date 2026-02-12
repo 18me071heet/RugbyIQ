@@ -40,16 +40,15 @@ public class EditTeam {
 
     
     public void clickThreeDots(String teamName) {
-        
-        try { Thread.sleep(2000); } catch (InterruptedException e) {}
-        String xpath = "//h2[contains(normalize-space(.), '" + teamName + "')]/ancestor::div[contains(@class, 'rounded')]//button";
+    	
+         String xpath = "//h2[contains(normalize-space(.), '" + teamName + "')]/ancestor::div[contains(@class, 'rounded')]//button";
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath))).click();
         try { Thread.sleep(1000); } catch (InterruptedException e) {} // Wait for menu to open
         System.out.println("Clicked on three dots for team: " + teamName);
     }
 
     public void clickEdit() {
-        try { Thread.sleep(2000); } catch (InterruptedException e) {}
+        
         System.out.println("Current URL before Edit click: " + driver.getCurrentUrl());
         
         WebElement targetEdit = null;
@@ -140,7 +139,6 @@ public class EditTeam {
     
     public void uploadTeamLogo(String filePath) {
 
-        // Make hidden input visible
         ((JavascriptExecutor) driver).executeScript(
                 "arguments[0].style.display='block'; arguments[0].style.height='1px'; arguments[0].style.width='1px';",
                 uploadTeamLogoInput);

@@ -81,8 +81,7 @@ public class CreatePlays {
 		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
 		    WebElement deleteBtn = wait.until(ExpectedConditions.presenceOfElementLocated(
-		            By.xpath("//a[contains(@class,'delete_play') and normalize-space()='Delete']")
-		    ));
+		    By.xpath("//a[contains(@class,'delete_play') and normalize-space()='Delete']")));
 
 		    JavascriptExecutor js = (JavascriptExecutor) driver;
 		    js.executeScript("arguments[0].scrollIntoView({block:'center'});", deleteBtn);

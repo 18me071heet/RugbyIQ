@@ -20,16 +20,16 @@ public class LogOut {
     }
 
     @FindBy(id = "dropdownDefaultButton")
-    private WebElement profileDropdown;
+    public WebElement profileDropdown;
 
     @FindBy(xpath = "//a[text()='Log Out']")
-    private WebElement logoutLink;
+    public WebElement logoutLink;
 
     @FindBy(xpath = "//div[@id='popup-logout']//a[contains(text(), \"Yes, I'm sure\")]")
-    private WebElement confirmLogoutButton;
+    public WebElement confirmLogoutButton;
 
     @FindBy(id = "toast-success")
-    private WebElement successToast;
+    public WebElement successToast;
 
     public void performLogout() {
        

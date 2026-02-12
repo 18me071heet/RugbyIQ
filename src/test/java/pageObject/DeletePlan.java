@@ -1,6 +1,7 @@
 package pageObject;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -25,6 +26,10 @@ public class DeletePlan {
     @FindBy(xpath="//a[@id='confirm-delete-plan']")
     WebElement clickRemove;
     
+    @FindBy(xpath = "//h2[contains(@class, 'text-gray-900')]")
+    List<WebElement> PlanNamesInListing;
+    
+    
 	public void clickRemove() {
 		
 		wait.until(ExpectedConditions.visibilityOf(clickRemove)).click();
@@ -46,5 +51,19 @@ public class DeletePlan {
 
 	    System.out.println("Clicked on Remove Plan");
 	}
+	
+	  public boolean isPlanNotVisibleInListing(String planName) {
+
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	        
+	        wait.until(ExpectedConditions.visibilityOfAllElements(PlanNamesInListing));
+
+	        for (WebElement element : PlanNamesInListing) {
+	            if (element.getText().trim().equalsIgnoreCase(planName)) {
+	                return false;   
+	            }
+	        }
+	        return true;
+	    }
 
 }

@@ -36,9 +36,6 @@ public class DeleteTeam {
 
     public void clickOnRemoveTeam() {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-
-       
         WebElement dropdown = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(
                         By.xpath("//div[contains(@id,'dropdown-') and contains(@class,'block')]")) );
